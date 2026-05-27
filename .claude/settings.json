@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 scripts/extract_metrics.py --db data/cosco_annuals.sqlite --output /tmp/test_extract.csv --start-year 2025 --end-year 2025)",
+      "Bash(python3 scripts/validate_metrics.py --strict --input data/value_line_metrics.csv --output /tmp/test_strict.csv)",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 -c \"import akshare as ak; help\\(ak.stock_repurchase_em\\)\")",
+      "Bash(python3 scripts/validate_metrics.py --input data/value_line_metrics.csv --output data/value_line_metrics_reviewed.csv --end-year 2026)",
+      "Bash(python3 scripts/build_value_line.py --metrics data/value_line_metrics_reviewed.csv --output reports/cosco_value_line.html --start-year 2017 --end-year 2026)",
+      "Bash(python3 -c \"from urllib.parse import urlparse; p=urlparse\\('file:data/external_sources/ccfi_weekly.csv'\\); print\\(f'scheme={p.scheme} path={p.path}'\\)\")"
+    ]
+  }
+}

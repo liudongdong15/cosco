@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>中远海控价值线</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: Arial, "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  color: #171717;
+  background: #e8e8e8;
+  line-height: 1.35;
+  padding: 12px;
+}
+.sheet {
+  width: 100%;
+  max-width: 1380px;
+  min-height: 1680px;
+  margin: 0 auto;
+  background: #fff;
+  border: 3px solid #333;
+  box-shadow: 0 2px 12px rgba(0,0,0,.14);
+}
+.top-grid {
+  display: grid;
+  grid-template-columns: 26% 24% 15% 18% 17%;
+  border-bottom: 2px solid #777;
+}
+.brand, .top-cell, .metric-cell, .valuation-cell {
+  min-height: 58px;
+  border-right: 2px solid #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.brand {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  flex-direction: column;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+.title-cell { grid-column: 2; grid-row: 1; }
+.rev-cell { grid-column: 3; grid-row: 1; }
+.profit-cell { grid-column: 4; grid-row: 1; }
+.roe-cell { grid-column: 5; grid-row: 1; border-right: 0; }
+.pe-cell { grid-column: 2; grid-row: 2; }
+.pb-cell { grid-column: 3 / span 2; grid-row: 2; }
+.date-cell { grid-column: 5; grid-row: 2; border-right: 0; }
+.top-cell {
+  font-size: 16px;
+  font-weight: 800;
+}
+.metric-cell {
+  flex-direction: column;
+  gap: 2px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.metric-cell strong, .valuation-cell strong {
+  display: block;
+  color: #005b9f;
+  font-size: 18px;
+  line-height: 1.1;
+}
+.valuation-cell {
+  flex-direction: column;
+  font-size: 12px;
+  font-weight: 700;
+}
+.valuation-cell.big strong { font-size: 28px; }
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 2px solid #777;
+}
+.quick-card {
+  min-height: 82px;
+  padding: 8px 10px;
+  border-right: 2px solid #aaa;
+}
+.quick-card:last-child { border-right: 0; }
+.eyebrow {
+  font-size: 11px;
+  color: #555;
+  font-weight: 800;
+  margin-bottom: 3px;
+}
+.quick-value {
+  color: #005b9f;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.1;
+}
+.quick-note {
+  margin-top: 4px;
+  color: #444;
+  font-size: 12px;
+}
+.main-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 305px;
+}
+.left-pane {
+  border-right: 2px solid #777;
+}
+.side-pane {
+  min-width: 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 12px;
+}
+th, td {
+  border: 1px solid #999;
+  padding: 5px 7px;
+  text-align: right;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+th {
+  background: #efefef;
+  font-weight: 800;
+}
+td:first-child, th:first-child {
+  text-align: left;
+  font-weight: 800;
+}
+.missing {
+  color: #999;
+}
+.block-title {
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 2px solid #777;
+  border-bottom: 1px solid #999;
+  background: #f3f3f3;
+  font-size: 14px;
+  font-weight: 900;
+}
+.block-title:first-child { border-top: 0; }
+.chart-wrap {
+  padding: 10px 12px 8px;
+}
+.chart-wrap svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.side-section {
+  border-bottom: 2px solid #777;
+}
+.side-section .content {
+  padding: 10px 12px;
+  font-size: 12px;
+  line-height: 1.55;
+}
+.side-section p + p { margin-top: 8px; }
+.side-section strong { display: block; margin-bottom: 3px; }
+.sources {
+  font-size: 11px;
+  color: #333;
+  line-height: 1.55;
+  word-break: break-all;
+}
+.footer-row {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  border-top: 2px solid #777;
+  font-size: 11px;
+}
+.footer-row > div {
+  padding: 8px 10px;
+  border-right: 1px solid #999;
+}
+.footer-row > div:last-child { border-right: 0; }
+.status-pill {
+  display: inline-block;
+  padding: 1px 5px;
+  border: 1px solid #aaa;
+  background: #f7f7f7;
+  font-size: 11px;
+}
+@media print {
+  body { background: white; padding: 0; }
+  .sheet { box-shadow: none; width: 100%; border-width: 2px; }
+}
+@media (max-width: 1420px) {
+  body { padding: 0; }
+  .sheet { max-width: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="sheet">
+  <div class="top-grid">
+    <div class="brand">
+      <div>601919.SH</div>
+      <div>01919.HK</div>
+    </div>
+    <div class="top-cell title-cell">中远海控价值线</div>
+    <div class="metric-cell rev-cell">最新收入<strong>518.0亿</strong></div>
+    <div class="metric-cell profit-cell">最新归母净利<strong>58.8亿</strong></div>
+    <div class="metric-cell roe-cell">最新ROE<strong>2.5%</strong></div>
+    <div class="valuation-cell big pe-cell">PE<strong>--</strong></div>
+    <div class="valuation-cell big pb-cell">PB<strong>--</strong></div>
+    <div class="valuation-cell date-cell">编制日期<strong>2026/05/24</strong></div>
+  </div>
+
+  <div class="quick-grid">
+    
+    <div class="quick-card">
+      <div class="eyebrow">Quick Read | 营业收入</div>
+      <div class="quick-value">518.0亿</div>
+      <div class="quick-note">同比 -76.4%；2017-2026 CAGR -6.0%</div>
+    </div>
+    
+    <div class="quick-card">
+      <div class="eyebrow">Quick Read | 归母净利润</div>
+      <div class="quick-value">58.8亿</div>
+      <div class="quick-note">同比 -81.0%；2017-2026 CAGR 9.2%</div>
+    </div>
+    
+    <div class="quick-card">
+      <div class="eyebrow">Quick Read | 经营现金流</div>
+      <div class="quick-value">111.2亿</div>
+      <div class="quick-note">同比 -75.6%；2017-2026 CAGR 5.1%</div>
+    </div>
+    
+    <div class="quick-card">
+      <div class="eyebrow">Quick Read | 资本结构</div>
+      <div class="quick-value">48.5%</div>
+      <div class="quick-note">总资产 4,860.2 亿，归母权益/总资产</div>
+    </div>
+  </div>
+
+  <div class="main-grid">
+    <div class="left-pane">
+      <table class="annual-table"><tr><th>年度</th><th>2017</th><th>2018</th><th>2019</th><th>2020</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>2026Q1</th></tr><tr><td>营业收入（亿元）</td><td>904.6</td><td>1,208.3</td><td>1,510.6</td><td>1,712.6</td><td>3,336.9</td><td>3,910.6</td><td>1,754.5</td><td>2,338.6</td><td>2,195.0</td><td>518.0</td></tr><tr><td>归母净利润（亿元）</td><td>26.6</td><td>12.3</td><td>67.6</td><td>99.3</td><td>893.0</td><td>1,096.0</td><td>238.6</td><td>491.0</td><td>308.7</td><td>58.8</td></tr><tr><td>经营现金流（亿元）</td><td>70.9</td><td>81.3</td><td>212.0</td><td>450.3</td><td>1,709.5</td><td>1,968.0</td><td>226.1</td><td>693.1</td><td>455.5</td><td>111.2</td></tr><tr><td>销售净利率</td><td>2.9%</td><td>1.0%</td><td>4.5%</td><td>5.8%</td><td>26.8%</td><td>28.0%</td><td>13.6%</td><td>21.0%</td><td>14.1%</td><td>11.3%</td></tr><tr><td>净资产收益率ROE</td><td>13.8%</td><td>5.5%</td><td>21.6%</td><td>25.1%</td><td>101.1%</td><td>59.6%</td><td>11.8%</td><td>22.6%</td><td>13.2%</td><td>2.5%</td></tr><tr><td>每股收益EPS（元）</td><td>0.26</td><td>0.12</td><td>0.56</td><td>0.81</td><td>5.59</td><td>6.83</td><td>1.48</td><td>3.08</td><td>1.99</td><td>0.38</td></tr><tr><td>总资产（亿元）</td><td>1,331.9</td><td>2,281.4</td><td>2,622.2</td><td>2,719.3</td><td>4,136.7</td><td>5,117.8</td><td>4,624.3</td><td>4,974.7</td><td>4,837.6</td><td>4,860.2</td></tr><tr><td>归母权益（亿元）</td><td>206.7</td><td>228.9</td><td>353.6</td><td>439.1</td><td>1,330.9</td><td>2,003.8</td><td>1,961.2</td><td>2,346.7</td><td>2,322.7</td><td>2,356.9</td></tr><tr><td>有息负债（亿元）</td><td>629.9</td><td>1,222.1</td><td>1,258.1</td><td>987.8</td><td>838.7</td><td>583.8</td><td>525.4</td><td>442.0</td><td>440.8</td><td>422.5</td></tr><tr><td>权益/资产</td><td>15.5%</td><td>10.0%</td><td>13.5%</td><td>16.1%</td><td>32.2%</td><td>39.2%</td><td>42.4%</td><td>47.2%</td><td>48.0%</td><td>48.5%</td></tr><tr><td>航运运量（万TEU）</td><td>2,091.4</td><td>1,836.6</td><td>2,573.9</td><td>2,634.4</td><td>1,932.5</td><td>2,441.2</td><td>2,355.5</td><td>2,593.9</td><td>2,743.5</td><td>691.6</td></tr><tr><td>航运营收比例</td><td>95.9%</td><td>95.0%</td><td>95.9%</td><td>96.9%</td><td>98.3%</td><td>98.2%</td><td>95.8%</td><td>96.6%</td><td>96.0%</td><td>95.8%</td></tr><tr><td>航运毛利率</td><td>7.4%</td><td>6.8%</td><td>9.3%</td><td>13.6%</td><td>42.3%</td><td>44.3%</td><td>15.2%</td><td>29.2%</td><td>19.4%</td><td><span class="missing">--</span></td></tr><tr><td>CCFI均值（点）</td><td>820.00</td><td>816.00</td><td>823.53</td><td>984.42</td><td>2,615.54</td><td>2,792.14</td><td>937.29</td><td>1,550.59</td><td>1,197.60</td><td>1,130.00</td></tr></table>
+      <div class="block-title">收入、归母净利润、经营现金流 &amp; CCFI均值趋势</div>
+      <div class="chart-wrap">
+    <svg viewBox="0 0 1040 360" xmlns="http://www.w3.org/2000/svg">
+      <rect width="1040" height="360" fill="#fff"/>
+      <text x="520" y="20" text-anchor="middle" font-size="15" font-weight="900" fill="#222">收入、归母净利润、经营现金流 &amp; CCFI均值趋势</text>
+      <line x1="54" y1="302.0" x2="968" y2="302.0" stroke="#cfcfcf" stroke-width="1"/><text x="46" y="306.0" text-anchor="end" font-size="12" fill="#666">0</text><text x="978" y="306.0" text-anchor="start" font-size="12" fill="#b54747">718</text><line x1="54" y1="234.5" x2="968" y2="234.5" stroke="#cfcfcf" stroke-width="1"/><text x="46" y="238.5" text-anchor="end" font-size="12" fill="#666">1095</text><text x="978" y="238.5" text-anchor="start" font-size="12" fill="#b54747">1292</text><line x1="54" y1="167.0" x2="968" y2="167.0" stroke="#cfcfcf" stroke-width="1"/><text x="46" y="171.0" text-anchor="end" font-size="12" fill="#666">2190</text><text x="978" y="171.0" text-anchor="start" font-size="12" fill="#b54747">1867</text><line x1="54" y1="99.5" x2="968" y2="99.5" stroke="#cfcfcf" stroke-width="1"/><text x="46" y="103.5" text-anchor="end" font-size="12" fill="#666">3285</text><text x="978" y="103.5" text-anchor="start" font-size="12" fill="#b54747">2441</text><line x1="54" y1="32.0" x2="968" y2="32.0" stroke="#cfcfcf" stroke-width="1"/><text x="46" y="36.0" text-anchor="end" font-size="12" fill="#666">4380</text><text x="978" y="36.0" text-anchor="start" font-size="12" fill="#b54747">3016</text>
+      <polyline points="54.0,246.2 155.6,227.5 257.1,208.9 358.7,196.4 460.2,96.3 561.8,60.9 663.3,193.8 764.9,157.8 866.4,166.7 968.0,270.1" fill="none" stroke="#1597f5" stroke-width="3"/><circle cx="54.0" cy="246.2" r="4" fill="#1597f5"/><circle cx="155.6" cy="227.5" r="4" fill="#1597f5"/><circle cx="257.1" cy="208.9" r="4" fill="#1597f5"/><circle cx="358.7" cy="196.4" r="4" fill="#1597f5"/><circle cx="460.2" cy="96.3" r="4" fill="#1597f5"/><circle cx="561.8" cy="60.9" r="4" fill="#1597f5"/><circle cx="663.3" cy="193.8" r="4" fill="#1597f5"/><circle cx="764.9" cy="157.8" r="4" fill="#1597f5"/><circle cx="866.4" cy="166.7" r="4" fill="#1597f5"/><circle cx="968.0" cy="270.1" r="4" fill="#1597f5"/><polyline points="54.0,300.4 155.6,301.2 257.1,297.8 358.7,295.9 460.2,247.0 561.8,234.4 663.3,287.3 764.9,271.7 866.4,283.0 968.0,298.4" fill="none" stroke="#13bfa9" stroke-width="3"/><circle cx="54.0" cy="300.4" r="4" fill="#13bfa9"/><circle cx="155.6" cy="301.2" r="4" fill="#13bfa9"/><circle cx="257.1" cy="297.8" r="4" fill="#13bfa9"/><circle cx="358.7" cy="295.9" r="4" fill="#13bfa9"/><circle cx="460.2" cy="247.0" r="4" fill="#13bfa9"/><circle cx="561.8" cy="234.4" r="4" fill="#13bfa9"/><circle cx="663.3" cy="287.3" r="4" fill="#13bfa9"/><circle cx="764.9" cy="271.7" r="4" fill="#13bfa9"/><circle cx="866.4" cy="283.0" r="4" fill="#13bfa9"/><circle cx="968.0" cy="298.4" r="4" fill="#13bfa9"/><polyline points="54.0,297.6 155.6,297.0 257.1,288.9 358.7,274.2 460.2,196.6 561.8,180.7 663.3,288.1 764.9,259.3 866.4,273.9 968.0,295.1" fill="none" stroke="#20b832" stroke-width="3"/><circle cx="54.0" cy="297.6" r="4" fill="#20b832"/><circle cx="155.6" cy="297.0" r="4" fill="#20b832"/><circle cx="257.1" cy="288.9" r="4" fill="#20b832"/><circle cx="358.7" cy="274.2" r="4" fill="#20b832"/><circle cx="460.2" cy="196.6" r="4" fill="#20b832"/><circle cx="561.8" cy="180.7" r="4" fill="#20b832"/><circle cx="663.3" cy="288.1" r="4" fill="#20b832"/><circle cx="764.9" cy="259.3" r="4" fill="#20b832"/><circle cx="866.4" cy="273.9" r="4" fill="#20b832"/><circle cx="968.0" cy="295.1" r="4" fill="#20b832"/><polyline points="54.0,290.0 155.6,290.5 257.1,289.6 358.7,270.7 460.2,79.0 561.8,58.3 663.3,276.2 764.9,204.2 866.4,245.6 968.0,253.6" fill="none" stroke="#bd2b24" stroke-width="3" stroke-dasharray="7,4"/><circle cx="54.0" cy="290.0" r="4" fill="#bd2b24"/><circle cx="155.6" cy="290.5" r="4" fill="#bd2b24"/><circle cx="257.1" cy="289.6" r="4" fill="#bd2b24"/><circle cx="358.7" cy="270.7" r="4" fill="#bd2b24"/><circle cx="460.2" cy="79.0" r="4" fill="#bd2b24"/><circle cx="561.8" cy="58.3" r="4" fill="#bd2b24"/><circle cx="663.3" cy="276.2" r="4" fill="#bd2b24"/><circle cx="764.9" cy="204.2" r="4" fill="#bd2b24"/><circle cx="866.4" cy="245.6" r="4" fill="#bd2b24"/><circle cx="968.0" cy="253.6" r="4" fill="#bd2b24"/>
+      <text x="54.0" y="334" text-anchor="middle" font-size="13" font-weight="700" fill="#555">2017</text><text x="155.6" y="334" text-anchor="middle" font-size="13" font-weight="700" fill="#555">2018</text><text x="257.1" y="334" text-anchor="middle" font-size="13" font-weight="700" fill="#555">2019</text><text x="358.7" y="334" text-anchor="middle" font-size="13" font-weight="700" fill="#555">2020</text><text x="460.2" y="334" text-anchor="middle" font-size="13" font-weight="700" fill="#555">2021</text><text x="561.8" y="334" text-anchor="middle" font-size="13" font-weight="700" fill="#555">2022</text><text x="663.3" y="334" text-anchor="middle" font-size="13" font-weight="700" fill="#555">2023</text><text x="764.9" y="334" text-anchor="middle" font-size="13" font-weight="700" fill="#555">2024</text><text x="866.4" y="334" text-anchor="middle" font-size="13" font-weight="700" fill="#555">2025</text><text x="968.0" y="334" text-anchor="middle" font-size="13" font-weight="700" fill="#555">2026</text>
+      <line x1="270.0" y1="350" x2="298.0" y2="350" stroke="#1597f5" stroke-width="3"/><text x="304.0" y="354" font-size="12" font-weight="700" fill="#333">营业收入</text><line x1="402.0" y1="350" x2="430.0" y2="350" stroke="#13bfa9" stroke-width="3"/><text x="436.0" y="354" font-size="12" font-weight="700" fill="#333">归母净利润</text><line x1="534.0" y1="350" x2="562.0" y2="350" stroke="#20b832" stroke-width="3"/><text x="568.0" y="354" font-size="12" font-weight="700" fill="#333">经营现金流</text><line x1="666.0" y1="350" x2="694.0" y2="350" stroke="#bd2b24" stroke-width="3" stroke-dasharray="7,4"/><text x="700.0" y="354" font-size="12" font-weight="700" fill="#333">CCFI均值</text>
+    </svg></div>
+      <div class="block-title">CCFI周均值年内曲线</div><div class="chart-wrap weekly-chart">
+    <svg class="weekly-ccfi-svg" viewBox="0 0 1040 300" xmlns="http://www.w3.org/2000/svg">
+      <rect width="1040" height="300" fill="#fff"/>
+      <text x="520" y="20" text-anchor="middle" font-size="15" font-weight="900" fill="#222">CCFI周均值年内曲线</text>
+      <line x1="54" y1="236.0" x2="1010" y2="236.0" stroke="#cfcfcf" stroke-width="1"/><text x="46" y="240.0" text-anchor="end" font-size="12" fill="#666">714</text><line x1="54" y1="185.5" x2="1010" y2="185.5" stroke="#cfcfcf" stroke-width="1"/><text x="46" y="189.5" text-anchor="end" font-size="12" fill="#666">1504</text><line x1="54" y1="135.0" x2="1010" y2="135.0" stroke="#cfcfcf" stroke-width="1"/><text x="46" y="139.0" text-anchor="end" font-size="12" fill="#666">2295</text><line x1="54" y1="84.5" x2="1010" y2="84.5" stroke="#cfcfcf" stroke-width="1"/><text x="46" y="88.5" text-anchor="end" font-size="12" fill="#666">3085</text><line x1="54" y1="34.0" x2="1010" y2="34.0" stroke="#cfcfcf" stroke-width="1"/><text x="46" y="38.0" text-anchor="end" font-size="12" fill="#666">3875</text>
+      <text x="54.0" y="270" text-anchor="middle" font-size="12" font-weight="700" fill="#555">W1</text><text x="274.6" y="270" text-anchor="middle" font-size="12" font-weight="700" fill="#555">W13</text><text x="513.6" y="270" text-anchor="middle" font-size="12" font-weight="700" fill="#555">W26</text><text x="752.6" y="270" text-anchor="middle" font-size="12" font-weight="700" fill="#555">W39</text><text x="1010.0" y="270" text-anchor="middle" font-size="12" font-weight="700" fill="#555">W53</text><line x1="54.0" y1="34" x2="54.0" y2="236" stroke="#e5e5e5" stroke-width="1"/><line x1="274.6" y1="34" x2="274.6" y2="236" stroke="#e5e5e5" stroke-width="1"/><line x1="513.6" y1="34" x2="513.6" y2="236" stroke="#e5e5e5" stroke-width="1"/><line x1="752.6" y1="34" x2="752.6" y2="236" stroke="#e5e5e5" stroke-width="1"/><line x1="1010.0" y1="34" x2="1010.0" y2="236" stroke="#e5e5e5" stroke-width="1"/>
+      <polyline class="weekly-ccfi-line" data-year="2022" points="54.0,62.3 72.4,58.6 90.8,54.4 109.2,53.8 145.9,52.3 164.3,57.9 182.7,62.7 201.1,65.1 219.5,66.5 237.8,70.7 256.2,72.3 274.6,76.8 293.0,82.4 311.4,81.7 329.8,82.9 348.2,83.7 366.5,86.3 384.9,84.3 403.3,81.2 421.7,77.7 440.1,78.0 458.5,75.2 476.8,73.8 495.2,74.3 513.6,72.6 532.0,75.1 550.4,72.2 568.8,75.2 587.2,77.9 605.5,79.5 623.9,85.2 642.3,90.3 660.7,96.1 679.1,100.8 697.5,107.6 715.8,114.9 734.2,123.4 752.6,132.8 789.4,152.1 807.8,156.4 826.2,162.6 844.5,167.2 862.9,171.1 881.3,176.1 899.7,181.7 918.1,188.0 936.5,191.5 954.8,196.0 973.2,198.1 991.6,200.4" fill="none" stroke="#bd2b24" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="54.0" cy="62.3" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="72.4" cy="58.6" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="90.8" cy="54.4" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="109.2" cy="53.8" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="145.9" cy="52.3" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="164.3" cy="57.9" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="182.7" cy="62.7" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="201.1" cy="65.1" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="219.5" cy="66.5" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="237.8" cy="70.7" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="256.2" cy="72.3" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="274.6" cy="76.8" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="293.0" cy="82.4" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="311.4" cy="81.7" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="329.8" cy="82.9" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="348.2" cy="83.7" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="366.5" cy="86.3" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="384.9" cy="84.3" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="403.3" cy="81.2" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="421.7" cy="77.7" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="440.1" cy="78.0" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="458.5" cy="75.2" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="476.8" cy="73.8" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="495.2" cy="74.3" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="513.6" cy="72.6" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="532.0" cy="75.1" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="550.4" cy="72.2" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="568.8" cy="75.2" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="587.2" cy="77.9" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="605.5" cy="79.5" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="623.9" cy="85.2" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="642.3" cy="90.3" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="660.7" cy="96.1" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="679.1" cy="100.8" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="697.5" cy="107.6" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="715.8" cy="114.9" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="734.2" cy="123.4" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="752.6" cy="132.8" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="789.4" cy="152.1" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="807.8" cy="156.4" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="826.2" cy="162.6" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="844.5" cy="167.2" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="862.9" cy="171.1" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="881.3" cy="176.1" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="899.7" cy="181.7" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="918.1" cy="188.0" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="936.5" cy="191.5" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="954.8" cy="196.0" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="973.2" cy="198.1" r="2.4" fill="#bd2b24" opacity="0.85"/><circle cx="991.6" cy="200.4" r="2.4" fill="#bd2b24" opacity="0.85"/><polyline class="weekly-ccfi-line" data-year="2023" points="54.0,201.4 72.4,204.8 90.8,207.5 127.5,210.7 145.9,209.2 164.3,211.7 182.7,212.8 201.1,214.0 219.5,216.4 237.8,218.2 256.2,219.2 274.6,220.4 293.0,220.7 311.4,221.4 329.8,221.9 348.2,220.0 366.5,219.8 384.9,220.5 403.3,221.2 421.7,221.6 440.1,222.1 458.5,222.7 476.8,222.4 495.2,222.9 513.6,224.4 532.0,225.4 550.4,226.0 568.8,226.3 587.2,226.5 605.5,226.4 623.9,225.7 642.3,224.8 660.7,224.5 679.1,224.6 697.5,224.7 715.8,225.7 734.2,225.9 752.6,227.2 789.4,229.2 807.8,229.4 826.2,229.8 844.5,228.7 862.9,227.7 881.3,225.9 899.7,225.6 918.1,226.8 936.5,226.8 954.8,226.1 973.2,225.4 991.6,223.5" fill="none" stroke="#6b7280" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="54.0" cy="201.4" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="72.4" cy="204.8" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="90.8" cy="207.5" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="127.5" cy="210.7" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="145.9" cy="209.2" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="164.3" cy="211.7" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="182.7" cy="212.8" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="201.1" cy="214.0" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="219.5" cy="216.4" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="237.8" cy="218.2" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="256.2" cy="219.2" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="274.6" cy="220.4" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="293.0" cy="220.7" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="311.4" cy="221.4" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="329.8" cy="221.9" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="348.2" cy="220.0" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="366.5" cy="219.8" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="384.9" cy="220.5" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="403.3" cy="221.2" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="421.7" cy="221.6" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="440.1" cy="222.1" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="458.5" cy="222.7" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="476.8" cy="222.4" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="495.2" cy="222.9" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="513.6" cy="224.4" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="532.0" cy="225.4" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="550.4" cy="226.0" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="568.8" cy="226.3" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="587.2" cy="226.5" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="605.5" cy="226.4" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="623.9" cy="225.7" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="642.3" cy="224.8" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="660.7" cy="224.5" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="679.1" cy="224.6" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="697.5" cy="224.7" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="715.8" cy="225.7" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="734.2" cy="225.9" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="752.6" cy="227.2" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="789.4" cy="229.2" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="807.8" cy="229.4" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="826.2" cy="229.8" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="844.5" cy="228.7" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="862.9" cy="227.7" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="881.3" cy="225.9" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="899.7" cy="225.6" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="918.1" cy="226.8" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="936.5" cy="226.8" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="954.8" cy="226.1" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="973.2" cy="225.4" r="2.4" fill="#6b7280" opacity="0.85"/><circle cx="991.6" cy="223.5" r="2.4" fill="#6b7280" opacity="0.85"/><polyline class="weekly-ccfi-line" data-year="2024" points="54.0,221.8 72.4,208.8 90.8,199.4 109.2,192.0 127.5,188.0 145.9,188.6 182.7,192.0 201.1,195.2 219.5,197.8 237.8,199.9 256.2,202.1 274.6,204.4 293.0,205.5 311.4,205.9 329.8,205.8 348.2,205.4 384.9,202.5 403.3,197.8 421.7,192.9 440.1,186.0 458.5,179.9 476.8,170.9 495.2,164.7 513.6,158.8 532.0,153.1 550.4,148.4 568.8,144.0 587.2,142.3 605.5,145.3 623.9,145.0 642.3,149.1 660.7,152.6 679.1,155.5 697.5,159.4 715.8,165.4 734.2,170.3 752.6,176.9 789.4,187.2 807.8,191.8 826.2,194.3 844.5,194.2 862.9,192.9 881.3,189.7 899.7,187.8 918.1,187.4 936.5,188.0 954.8,186.7 973.2,186.3 991.6,184.8" fill="none" stroke="#1597f5" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="54.0" cy="221.8" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="72.4" cy="208.8" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="90.8" cy="199.4" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="109.2" cy="192.0" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="127.5" cy="188.0" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="145.9" cy="188.6" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="182.7" cy="192.0" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="201.1" cy="195.2" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="219.5" cy="197.8" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="237.8" cy="199.9" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="256.2" cy="202.1" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="274.6" cy="204.4" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="293.0" cy="205.5" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="311.4" cy="205.9" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="329.8" cy="205.8" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="348.2" cy="205.4" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="384.9" cy="202.5" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="403.3" cy="197.8" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="421.7" cy="192.9" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="440.1" cy="186.0" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="458.5" cy="179.9" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="476.8" cy="170.9" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="495.2" cy="164.7" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="513.6" cy="158.8" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="532.0" cy="153.1" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="550.4" cy="148.4" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="568.8" cy="144.0" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="587.2" cy="142.3" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="605.5" cy="145.3" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="623.9" cy="145.0" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="642.3" cy="149.1" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="660.7" cy="152.6" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="679.1" cy="155.5" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="697.5" cy="159.4" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="715.8" cy="165.4" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="734.2" cy="170.3" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="752.6" cy="176.9" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="789.4" cy="187.2" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="807.8" cy="191.8" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="826.2" cy="194.3" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="844.5" cy="194.2" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="862.9" cy="192.9" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="881.3" cy="189.7" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="899.7" cy="187.8" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="918.1" cy="187.4" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="936.5" cy="188.0" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="954.8" cy="186.7" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="973.2" cy="186.3" r="2.4" fill="#1597f5" opacity="0.85"/><circle cx="991.6" cy="184.8" r="2.4" fill="#1597f5" opacity="0.85"/><polyline class="weekly-ccfi-line" data-year="2025" points="54.0,182.7 72.4,181.9 90.8,182.1 109.2,185.5 145.9,191.2 164.3,193.0 182.7,197.4 201.1,201.7 219.5,204.2 237.8,205.5 256.2,208.3 274.6,210.6 293.0,211.2 311.4,210.9 329.8,210.6 348.2,209.9 366.5,210.0 384.9,210.9 403.3,211.0 421.7,210.9 440.1,210.2 458.5,207.8 476.8,202.2 495.2,195.8 513.6,194.1 532.0,195.8 550.4,197.7 568.8,198.3 587.2,201.0 605.5,202.9 623.9,204.9 642.3,205.4 660.7,206.6 679.1,207.7 697.5,208.2 715.8,209.7 734.2,210.0 752.6,212.1 789.4,216.8 807.8,219.4 826.2,218.2 844.5,216.4 862.9,214.0 881.3,211.7 899.7,209.9 918.1,209.9 936.5,210.4 954.8,210.2 973.2,209.8 991.6,208.4" fill="none" stroke="#20b832" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="54.0" cy="182.7" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="72.4" cy="181.9" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="90.8" cy="182.1" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="109.2" cy="185.5" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="145.9" cy="191.2" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="164.3" cy="193.0" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="182.7" cy="197.4" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="201.1" cy="201.7" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="219.5" cy="204.2" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="237.8" cy="205.5" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="256.2" cy="208.3" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="274.6" cy="210.6" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="293.0" cy="211.2" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="311.4" cy="210.9" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="329.8" cy="210.6" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="348.2" cy="209.9" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="366.5" cy="210.0" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="384.9" cy="210.9" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="403.3" cy="211.0" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="421.7" cy="210.9" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="440.1" cy="210.2" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="458.5" cy="207.8" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="476.8" cy="202.2" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="495.2" cy="195.8" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="513.6" cy="194.1" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="532.0" cy="195.8" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="550.4" cy="197.7" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="568.8" cy="198.3" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="587.2" cy="201.0" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="605.5" cy="202.9" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="623.9" cy="204.9" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="642.3" cy="205.4" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="660.7" cy="206.6" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="679.1" cy="207.7" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="697.5" cy="208.2" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="715.8" cy="209.7" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="734.2" cy="210.0" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="752.6" cy="212.1" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="789.4" cy="216.8" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="807.8" cy="219.4" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="826.2" cy="218.2" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="844.5" cy="216.4" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="862.9" cy="214.0" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="881.3" cy="211.7" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="899.7" cy="209.9" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="918.1" cy="209.9" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="936.5" cy="210.4" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="954.8" cy="210.2" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="973.2" cy="209.8" r="2.4" fill="#20b832" opacity="0.85"/><circle cx="991.6" cy="208.4" r="2.4" fill="#20b832" opacity="0.85"/><polyline class="weekly-ccfi-line" data-year="2026" points="72.4,205.3 90.8,204.3 109.2,204.4 127.5,206.5 145.9,209.9 164.3,212.1 201.1,214.9 219.5,214.3 237.8,213.1 256.2,210.0 274.6,208.8 293.0,205.9 311.4,204.3 329.8,204.2 348.2,202.8 366.5,200.5 384.9,199.9 403.3,199.8 421.7,197.4" fill="none" stroke="#8b5cf6" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.4" cy="205.3" r="2.4" fill="#8b5cf6" opacity="0.85"/><circle cx="90.8" cy="204.3" r="2.4" fill="#8b5cf6" opacity="0.85"/><circle cx="109.2" cy="204.4" r="2.4" fill="#8b5cf6" opacity="0.85"/><circle cx="127.5" cy="206.5" r="2.4" fill="#8b5cf6" opacity="0.85"/><circle cx="145.9" cy="209.9" r="2.4" fill="#8b5cf6" opacity="0.85"/><circle cx="164.3" cy="212.1" r="2.4" fill="#8b5cf6" opacity="0.85"/><circle cx="201.1" cy="214.9" r="2.4" fill="#8b5cf6" opacity="0.85"/><circle cx="219.5" cy="214.3" r="2.4" fill="#8b5cf6" opacity="0.85"/><circle cx="237.8" cy="213.1" r="2.4" fill="#8b5cf6" opacity="0.85"/><circle cx="256.2" cy="210.0" r="2.4" fill="#8b5cf6" opacity="0.85"/><circle cx="274.6" cy="208.8" r="2.4" fill="#8b5cf6" opacity="0.85"/><circle cx="293.0" cy="205.9" r="2.4" fill="#8b5cf6" opacity="0.85"/><circle cx="311.4" cy="204.3" r="2.4" fill="#8b5cf6" opacity="0.85"/><circle cx="329.8" cy="204.2" r="2.4" fill="#8b5cf6" opacity="0.85"/><circle cx="348.2" cy="202.8" r="2.4" fill="#8b5cf6" opacity="0.85"/><circle cx="366.5" cy="200.5" r="2.4" fill="#8b5cf6" opacity="0.85"/><circle cx="384.9" cy="199.9" r="2.4" fill="#8b5cf6" opacity="0.85"/><circle cx="403.3" cy="199.8" r="2.4" fill="#8b5cf6" opacity="0.85"/><circle cx="421.7" cy="197.4" r="2.4" fill="#8b5cf6" opacity="0.85"/>
+      <line x1="190.0" y1="290" x2="218.0" y2="290" stroke="#bd2b24" stroke-width="3"/><text x="224.0" y="294" font-size="12" font-weight="700" fill="#333">2022（50周）</text><line x1="328.0" y1="290" x2="356.0" y2="290" stroke="#6b7280" stroke-width="3"/><text x="362.0" y="294" font-size="12" font-weight="700" fill="#333">2023（50周）</text><line x1="466.0" y1="290" x2="494.0" y2="290" stroke="#1597f5" stroke-width="3"/><text x="500.0" y="294" font-size="12" font-weight="700" fill="#333">2024（49周）</text><line x1="604.0" y1="290" x2="632.0" y2="290" stroke="#20b832" stroke-width="3"/><text x="638.0" y="294" font-size="12" font-weight="700" fill="#333">2025（50周）</text><line x1="742.0" y1="290" x2="770.0" y2="290" stroke="#8b5cf6" stroke-width="3"/><text x="776.0" y="294" font-size="12" font-weight="700" fill="#333">2026（YTD）</text>
+    </svg></div>
+      <div class="block-title">A股估值带（601919.SH）</div>
+      
+    <table>
+      <tr>
+        <th>年度</th><th>最低价</th><th>最高价</th><th>年末收盘</th><th>EPS</th>
+        <th>年末PE</th><th>年末PB</th><th>总市值(亿)</th>
+      </tr>
+      <tr><td>2017</td><td>5.01</td><td>8.52</td><td>6.77</td><td>0.26</td><td>26.0</td><td>2.50</td><td>517</td></tr><tr><td>2018</td><td>3.33</td><td>7.48</td><td>4.04</td><td>0.12</td><td>33.7</td><td>1.35</td><td>308</td></tr><tr><td>2019</td><td>4.02</td><td>6.58</td><td>5.27</td><td>0.56</td><td>9.4</td><td>1.14</td><td>402</td></tr><tr><td>2020</td><td>3.14</td><td>12.65</td><td>12.21</td><td>0.81</td><td>15.1</td><td>2.41</td><td>1,057</td></tr><tr><td>2021</td><td>9.59</td><td>33.40</td><td>18.69</td><td>5.59</td><td>3.3</td><td>1.59</td><td>2,118</td></tr><tr><td>2022</td><td>10.13</td><td>19.93</td><td>10.29</td><td>6.83</td><td>1.5</td><td>0.65</td><td>1,311</td></tr><tr><td>2023</td><td>9.30</td><td>11.73</td><td>9.58</td><td>1.48</td><td>6.5</td><td>0.62</td><td>1,222</td></tr><tr><td>2024</td><td>9.21</td><td>17.58</td><td>15.50</td><td>3.08</td><td>5.0</td><td>0.84</td><td>1,978</td></tr><tr><td>2025</td><td>12.74</td><td>16.89</td><td>15.18</td><td>1.99</td><td>7.6</td><td>0.82</td><td>1,914</td></tr><tr><td>2026</td><td><span class="missing">--</span></td><td><span class="missing">--</span></td><td><span class="missing">--</span></td><td>0.38</td><td><span class="missing">--</span></td><td><span class="missing">--</span></td><td><span class="missing">--</span></td></tr>
+    </table>
+    </div>
+    <div class="side-pane">
+      <div class="side-section">
+        <div class="block-title">年均增长率</div>
+        
+    <table>
+      <tr><th>项目</th><th>8年</th><th>5年</th><th>3年</th></tr>
+      <tr><td>营业收入</td><td>-10.0%</td><td>-31.1%</td><td>-33.4%</td></tr><tr><td>归母净利</td><td>21.6%</td><td>-42.0%</td><td>-37.3%</td></tr><tr><td>经营现金流</td><td>4.0%</td><td>-42.1%</td><td>-21.1%</td></tr><tr><td>归母权益</td><td>33.8%</td><td>12.1%</td><td>6.3%</td></tr>
+    </table>
+      </div>
+      <div class="side-section">
+        <div class="block-title">每股分红</div>
+        
+    <table>
+      <tr><th>年度</th><th>每股</th><th>总额(亿)</th><th>支付率</th><th>股息率</th></tr>
+      <tr><td>2026</td><td><span class="missing">--</span></td><td><span class="missing">--</span></td><td><span class="missing">--</span></td><td><span class="missing">--</span></td></tr><tr><td>2025</td><td>1.00</td><td>154.1</td><td>49.9%</td><td>6.6%</td></tr><tr><td>2024</td><td>1.55</td><td>244.3</td><td>49.8%</td><td>10.0%</td></tr><tr><td>2023</td><td>0.74</td><td>118.7</td><td>49.7%</td><td>7.7%</td></tr><tr><td>2022</td><td>3.40</td><td>547.2</td><td>49.9%</td><td>33.0%</td></tr>
+    </table>
+      </div>
+      <div class="side-section">
+        <div class="block-title">市值与回购</div>
+        <div class="content">
+    <table>
+      <tr><th>年度</th><th>年末收盘(元)</th><th>市值(亿)</th><th>回购(亿)</th><th>回购占比</th></tr>
+      <tr><td>2026</td><td><span class="missing">--</span></td><td><span class="missing">--</span></td><td>-</td><td><span class="missing">--</span></td></tr><tr><td>2025</td><td>15.18</td><td>1,914</td><td>65.61</td><td>3.4%</td></tr><tr><td>2024</td><td>15.50</td><td>1,978</td><td>20.18</td><td>1.0%</td></tr><tr><td>2023</td><td>9.58</td><td>1,222</td><td>12.61</td><td>1.0%</td></tr><tr><td>2022</td><td>10.29</td><td>1,311</td><td>-</td><td><span class="missing">--</span></td></tr>
+    </table>
+    <p style="margin-top:6px;font-size:11px;color:#555;">行情来源 akshare 不复权日线，回购金额来自年报（A+H合计，A股部分akshare交叉验证一致）。</p></div>
+      </div>
+      <div class="side-section">
+        <div class="block-title">估值摘要</div>
+        
+    <div class="content">
+      <p><strong>当前A股</strong>截至 2026/05/24，PE --，PB --，，。数据来源 akshare 不复权日线 + 年报 EPS/权益。</p>
+      <p><strong>历史估值</strong>2017-2025 年 PE 区间 1.5–33.7 倍，PB 区间 0.62–2.50 倍。航运业重资产、高周期，PB 持续低于 1 倍净资产。</p>
+      <p><strong>怎么看</strong>对中远海控这类强周期公司，低 PE 往往对应盈利顶峰而非买入信号，估值应与运价周期、分红政策、资产负债表一起观察。</p>
+    </div>
+      </div>
+      <div class="side-section">
+        <div class="block-title">投资判断</div>
+        
+    <div class="content">
+      <p><strong>周期主线</strong>2026 年收入 518.0 亿、归母净利 58.8 亿、经营现金流 111.2 亿，ROE 2.5%。</p>
+      <p><strong>盈利弹性</strong>2017-2026 年归母净利峰值出现在 2022 年，约 1,096.0 亿，利润对运价周期高度敏感。</p>
+      <p><strong>跟踪指标</strong>CCFI 已审核数据可与利润曲线对照观察。</p>
+      <p><strong>主要风险</strong>全球贸易、运价、有效运力、燃油成本、港口拥堵和地缘事件均可能影响盈利。</p>
+    </div>
+      </div>
+      <div class="side-section">
+        <div class="block-title">数据来源</div>
+        <div class="content sources"><p><strong>年报文件</strong><br>中远海控2017年报.pdf<br>中远海控2018年报.pdf<br>中远海控2019年报.pdf<br>中远海控2020年报.pdf<br>中远海控2021年报.pdf<br>中远海控2022年报.pdf<br>中远海控2023年报.pdf<br>中远海控2024年报.pdf<br>中远海控2025年报.pdf</p><p><strong>状态统计</strong><br><span class="status-pill">reviewed 209</span> <span class="status-pill">candidate 0</span> <span class="status-pill">missing 0</span></p><p><strong>外部数据</strong><br>CCFI均值（2017-2026，10年）、行情估值（2017-2025，9年）、分红（2017-2020，4年）。</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-row">
+    <div><strong>说明</strong><br>本地年报数据整理</div>
+    <div>PE/PB、行情估值来自 akshare 不复权日线数据；CCFI 年均值来自年报原文 + 外部数据交叉验证；CCFI 周均值来自 Wind 截图人工复核表。核心指标均与年报原文核对一致。仅供个人研究，不构成投资建议。</div>
+  </div>
+</div>
+
+</body>
+</html>

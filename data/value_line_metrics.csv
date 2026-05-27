@@ -1,0 +1,210 @@
+﻿metric_key,metric_name,year,value,unit,source_type,source_file,page,source_url,evidence_text,confidence,status,note
+ccfi_average,CCFI 年均值,2017,820.0,点,external,,,file://data/external_sources/ccfi_annual_sources.md#2017,主流机构引述值820点，月均值范围753–877，全年12个月算术平均约820,high,reviewed,交通运输部月度数据 + 主流机构引述
+container_shipping_revenue,集装箱航运收入,2017,867.51,亿元,annual_report,中远海控2017年报.pdf,13,,"2017 年实现营业收入同比增加206.34 亿元,增幅29.55%。其 中： 集装箱航运业务 2017 年集装箱航运及相关业务收入867.51 亿元，同比增加201.73 亿元，增幅30.30%。 截至2017 年末，集装箱船队自营船舶360 艘，比年初增加48 艘",medium,reviewed,人工核对年报确认
+dividend_per_share,每股股利,2017,0,元/股,external,,,akshare.stock_history_dividend_detail(symbol='601919'),akshare: 2017年度不分配,high,reviewed,akshare分红数据+年报核对
+dividend_total,分红总额,2017,0,亿元,external,,,akshare.stock_history_dividend_detail(symbol='601919'),2017年度不分配,high,reviewed,年报原文+akshare交叉验证
+eps,基本每股收益,2017,0.26,元/股,annual_report,中远海控2017年报.pdf,6,,标 2017年 2016年 本期比上年同 期增减(%) 2015年 调整后 调整前 调整后 调整前 基本每股收益（元／股） 0.26 -0.97 -0.97 0.05 0.03 稀释每股收益（元／股） 0.26 -0.97 -0.97 0.05 0.03 扣除非经常性损益后的基本每 股收益（,high,candidate,
+equity_parent,归属于上市公司股东的净资产,2017,206.69,亿元,annual_report,中远海控2017年报.pdf,6,,"末 2016年末 本期末比 上年同期 末增减（ %） 2015年末 调整后 调整前 调整后 调整前 归属于上市公司股东的净 资产 20,669,286 ,170.30 18,323,295 ,777.80 18,323,295 ,777.80 12.80 28,559,548,9 28.71 24,653,3 25,636.",high,candidate,
+net_profit_parent,归属于上市公司股东的净利润,2017,26.62,亿元,annual_report,中远海控2017年报.pdf,5,,"60.47 27.13 65,035,590 ,782.76 57,489,919 ,045.77 归属于上市公司股东的净 利润 2,661,935, 871.48 -9,906,003, 612.80 -9,906,003, 612.80 469,301,78 9.49 283,391,10 4.76",high,candidate,
+operating_cash_flow,经营活动产生的现金流量净额,2017,70.92,亿元,annual_report,中远海控2017年报.pdf,6,,"385, 641.21 -4,616,430, 386.55 -4,616,430, 386.55 经营活动产生的现金流量 净额 7,092,039, 383.86 1,519,532, 177.96 1,519,532, 177.96 366.73 7,071,791, 349.42 6,663,680, 638.95",high,candidate,
+revenue,营业收入,2017,904.64,亿元,annual_report,中远海控2017年报.pdf,5,,"2017年 2016年 本期比上 年同期增 减(%) 2015年 调整后 调整前 调整后 调整前 营业收入 90,463,957 ,861.05 71,160,180 ,860.47 71,160,180 ,860.47 27.13 65,035,590 ,782.76 57,489,919 ,045.",high,candidate,
+roe,加权平均净资产收益率,2017,13.77,%,annual_report,中远海控2017年报.pdf,6,,非经常性损益后的基本每 股收益（元／股） 0.09 -0.69 -0.69 -0.45 -0.45 加权平均净资产收益率（%） 13.77 -44.19 -44.19 增加57.96个 百分点 1.64 1.16 扣除非经常性损益后的加权平 均净资产收益率（%） 4.91 -31.01 -31.0,high,candidate,
+terminal_revenue,码头业务收入,2017,43.58,亿元,annual_report,中远海控2017年报.pdf,13,,重组完成及新交付船舶增加，中 远海运集运运力规模明显扩大，航线布局进一步优化。 码头业务 2017 年码头及相关业务收入43.58 亿元，同比增加5.95 亿元，增幅15.82%。控股集装箱 码头吞吐量1735.34 万标准箱，同比增加161.82 万标,high,reviewed,规则抽取+人工核对年报确认
+total_assets,总资产,2017,1331.9,亿元,annual_report,中远海控2017年报.pdf,6,,"7.80 12.80 28,559,548,9 28.71 24,653,3 25,636.1 1 总资产 133,190,00 4,778.33 119,652,73 3,482.28 119,652,73 3,482.28 11.31 160,493,497, 697.31 148,193, 148,",high,candidate,
+ccfi_average,CCFI 年均值,2018,816.0,点,external,,,file://data/external_sources/ccfi_annual_sources.md#2018,上海国际海事信息与文献网、中远海控相关研报、交通运输部月度数据,high,reviewed,年报原文为818点，以第三方机构816点为准
+container_shipping_revenue,集装箱航运收入,2018,1148.45,亿元,annual_report,中远海控2018年报.pdf,15,,"2018年集装箱航运及相关业务收入1,148.45亿元，同比增加280.93亿元，增幅32.38%。其中：中远海运集运2018年实现集装箱航运及相关业务收入913.66亿元",high,reviewed,人工核对年报确认
+dividend_per_share,每股股利,2018,0,元/股,external,,,akshare.stock_history_dividend_detail(symbol='601919'),akshare: 2018年度不分配,high,reviewed,akshare分红数据+年报核对
+dividend_total,分红总额,2018,0,亿元,external,,,akshare.stock_history_dividend_detail(symbol='601919'),2018年度不分配（CSV原值12.30为净利润误提取）,high,reviewed,年报原文+akshare交叉验证
+eps,基本每股收益,2018,0.12,元/股,annual_report,中远海控2018年报.pdf,6,,(二) 主要财务指标 主要财务指标 2018年 2017年 本期比上年同期增减(%) 2016年 基本每股收益（元／股） 0.12 0.26 -53.85 -0.97 稀释每股收益（元／股） 0.12 0.26 -53.85 -0.97 扣除非经常性损益后的基本每 股收益（元／股） 0.0,high,candidate,
+equity_parent,归属于上市公司股东的净资产,2018,228.86,亿元,annual_report,中远海控2018年报.pdf,6,,",532,177.96 2018年末 2017年末 本期末比 上年同期 末增减(%) 2016年末 归属于上市公司 股东的净资产 22,886,213,478.10 20,669,286,170.30 10.73 18,323,295,777.80 总资产 228,143,804,963.20 133,190,004,77",high,candidate,
+net_profit_parent,归属于上市公司股东的净利润,2018,12.3,亿元,annual_report,中远海控2018年报.pdf,6,,",787.97 90,463,957,861.05 33.57 71,160,180,860.47 归属于上市公司 股东的净利润 1,230,026,418.28 2,661,935,871.48 -53.79 -9,906,003,612.80 归属于上市公司 股东的扣除非经 常性损益的净利 润 190,381,878",high,candidate,
+operating_cash_flow,经营活动产生的现金流量净额,2018,81.31,亿元,annual_report,中远海控2018年报.pdf,6,,"81,878.46 950,068,952.51 -79.96 -7,094,385,641.21 经营活动产生的 现金流量净额 8,130,775,621.62 7,092,039,383.86 14.65 1,519,532,177.96 2018年末 2017年末 本期末比 上年同期 末增减(%) 2016年末 归",high,candidate,
+revenue,营业收入,2018,1208.3,亿元,annual_report,中远海控2018年报.pdf,6,,"：元 币种：人民币 主要会计数据 2018年 2017年 本期比上 年同期增 减(%) 2016年 营业收入 120,829,528,787.97 90,463,957,861.05 33.57 71,160,180,860.47 归属于上市公司 股东的净利润 1,230,026,418.28 2,661",high,candidate,
+roe,加权平均净资产收益率,2018,5.52,%,annual_report,中远海控2018年报.pdf,6,,.97 扣除非经常性损益后的基本每 股收益（元／股） 0.02 0.09 -77.78 -0.69 加权平均净资产收益率（%） 5.52 13.77 减少8.25个百分点 -44.19 扣除非经常性损益后的加权平 均净资产收益率（%） 0.85 4.91 减少4.06个百分点 -31.01 报告,high,candidate,
+terminal_revenue,码头业务收入,2018,77.12,亿元,annual_report,中远海控2018年报.pdf,15,,主要由于码头业务量增长，2018年码头及相关业务收入77.12亿元，同比增加33.54亿元，增幅76.97%。,high,reviewed,规则抽取+人工核对年报确认
+total_assets,总资产,2018,2281.44,亿元,annual_report,中远海控2018年报.pdf,6,,",478.10 20,669,286,170.30 10.73 18,323,295,777.80 总资产 228,143,804,963.20 133,190,004,778.33 71.29 119,652,733,482.28 (二) 主要财务指标 主要财务指标 2018年 2017年 本期比上年",high,candidate,
+ccfi_average,CCFI 年均值,2019,823.53,点,external,,,file://data/external_sources/ccfi_annual_sources.md#2019,人民网英文版引述上海航运交易所数据，月均值范围812–887，算术平均确认823.53,high,reviewed,年报原文为824点，以航交所官方823.53为准
+container_shipping_revenue,集装箱航运收入,2019,1448.06,亿元,annual_report,中远海控2019年报.pdf,16,,"集装箱航运业务收入1,448.06 亿元，同比增加299.62 亿元，增幅26.09%（其中：中远海运集运收入985.63 亿元，同比增加71.97 亿元，增幅7.88%）",high,reviewed,人工核对年报确认
+dividend_per_share,每股股利,2019,0,元/股,external,,,akshare.stock_history_dividend_detail(symbol='601919'),akshare: 2019年度不分配,high,reviewed,akshare分红数据+年报核对
+dividend_total,分红总额,2019,0,亿元,external,,,akshare.stock_history_dividend_detail(symbol='601919'),2019年度不分配,high,reviewed,年报原文+akshare交叉验证
+eps,基本每股收益,2019,0.56,元/股,annual_report,中远海控2019年报.pdf,6,,(二) 主要财务指标 主要财务指标 2019年 2018年 本期比上年同 期增减(%) 2017年 基本每股收益（元／股） 0.56 0.12 366.67 0.26 稀释每股收益（元／股） 0.56 0.12 366.67 0.26 扣除非经常性损益后的基本每股 收益（元／股） 0.13,high,candidate,
+equity_parent,归属于上市公司股东的净资产,2019,353.6,亿元,annual_report,中远海控2019年报.pdf,6,,"39,383.86 2019年末 2018年末 本期末 比上年 同期末 增减（ %） 2017年末 归属于上市公司 股东的净资产 35,359,676,133.83 22,886,213,478.10 54.50 20,669,286,170.30 总资产 262,224,029,547.74 228,143,804,96",high,candidate,
+net_profit_parent,归属于上市公司股东的净利润,2019,67.64,亿元,annual_report,中远海控2019年报.pdf,6,,"119.72 120,829,528,787.97 25.02 90,463,957,861.05 归属于上市公司 股东的净利润 6,764,104,771.48 1,230,026,418.28 449.92 2,661,935,871.48 归属于上市公司 股东的扣除非经 常性损益的净利 润 1,585,437,94",high,candidate,
+operating_cash_flow,经营活动产生的现金流量净额,2019,212.02,亿元,annual_report,中远海控2019年报.pdf,6,,"5,437,943.57 190,381,878.46 732.77 950,068,952.51 经营活动产生的 现金流量净额 21,202,371,528.39 8,130,775,621.62 160.77 7,092,039,383.86 2019年末 2018年末 本期末 比上年 同期末 增减（ %） 2017年",high,candidate,
+revenue,营业收入,2019,1510.57,亿元,annual_report,中远海控2019年报.pdf,6,,"元 币种：人民币 主要会计数据 2019年 2018年 本期比 上年同 期增减 (%) 2017年 营业收入 151,056,682,119.72 120,829,528,787.97 25.02 90,463,957,861.05 归属于上市公司 股东的净利润 6,764,104,771.48 1,23",high,candidate,
+roe,加权平均净资产收益率,2019,21.57,%,annual_report,中远海控2019年报.pdf,6,,0.26 扣除非经常性损益后的基本每股 收益（元／股） 0.13 0.02 550.00 0.09 加权平均净资产收益率（%） 21.57 5.52 增加16.05个 百分点 13.77 扣除非经常性损益后的加权平均 净资产收益率（%） 5.06 0.85 增加4.21个百 分点 4.91 报告期,high,candidate,
+terminal_revenue,码头业务收入,2019,87.51,亿元,annual_report,中远海控2019年报.pdf,16,,码头业务收入87.51 亿元，同比增加10.39 亿元，增幅13.47%（其中：中远海运港口收入72.17 亿元，同比增加4.98 亿元，增幅7.42%）。,high,reviewed,规则抽取+人工核对年报确认
+total_assets,总资产,2019,2622.24,亿元,annual_report,中远海控2019年报.pdf,6,,",133.83 22,886,213,478.10 54.50 20,669,286,170.30 总资产 262,224,029,547.74 228,143,804,963.20 14.94 133,190,004,778.33 (二) 主要财务指标 主要财务指标 2019年 2018年 本期比上年",high,candidate,
+ccfi_average,CCFI 年均值,2020,984.42,点,external,,,file://data/external_sources/ccfi_annual_sources.md#2020,上海国际海事信息与文献网,high,reviewed,年报原文为984.4点，以第三方机构984.42为准
+container_shipping_revenue,集装箱航运收入,2020,1660.09,亿元,annual_report,中远海控2020年报.pdf,15,,"集装箱航运业务收入1,660.09 亿元，同比增加212.02 亿元，增幅14.64%（其中：中远海运集运收入1,121.37 亿元，同比增加135.74 亿元，增幅13.77%）",high,reviewed,人工核对年报确认
+dividend_per_share,每股股利,2020,0,元/股,external,,,akshare.stock_history_dividend_detail(symbol='601919'),akshare: 2020年度不分配,high,reviewed,akshare分红数据+年报核对
+dividend_total,分红总额,2020,0,亿元,external,,,akshare.stock_history_dividend_detail(symbol='601919'),2020年度不分配,high,reviewed,年报原文+akshare交叉验证
+eps,基本每股收益,2020,0.81,元/股,annual_report,中远海控2020年报.pdf,7,,(二) 主要财务指标 主要财务指标 2020年 2019年 本期比上年同期增 减(%) 2018年 基本每股收益（元／股） 0.81 0.56 44.64 0.12 稀释每股收益（元／股） 0.81 0.56 44.64 0.12 扣除非经常性损益后的基本每股 收益（元／股） 0.78 0.,high,candidate,
+equity_parent,归属于上市公司股东的净资产,2020,439.14,亿元,annual_report,中远海控2020年报.pdf,7,,"775,621.62 2020年末 2019年末 本期末比 上年同期 末增减（ %） 2018年末 归属于上市公 司股东的净资 产 43,913,865,928.85 35,359,676,133.83 24.19 22,886,213,478.10 总资产 271,926,073,831.72 262,224,029,54",high,candidate,
+net_profit_parent,归属于上市公司股东的净利润,2020,99.27,亿元,annual_report,中远海控2020年报.pdf,6,,"13.71 151,056,682,119.72 13.37 120,829,528,787.97 归属于上市公 司股东的净利 润 9,927,098,239.01 6,764,104,771.48 46.76 1,230,026,418.28 归属于上市公 司股东的扣除 非经常性损益 的净利润 9,593,418,830",high,candidate,
+operating_cash_flow,经营活动产生的现金流量净额,2020,450.31,亿元,annual_report,中远海控2020年报.pdf,7,,"2020 年年度报告 7 / 212 经营活动产生 的现金流量净 额 45,030,555,340.04 21,202,371,528.39 112.38 8,130,775,621.62 2020年末 2019年末 本期末比 上年同期 末增减（ %） 2018年",high,candidate,
+revenue,营业收入,2020,1712.59,亿元,annual_report,中远海控2020年报.pdf,6,,"：元 币种：人民币 主要会计数据 2020年 2019年 本期比上 年同期增 减(%) 2018年 营业收入 171,258,833,813.71 151,056,682,119.72 13.37 120,829,528,787.97 归属于上市公 司股东的净利 润 9,927,098,239.01 6,",high,candidate,
+roe,加权平均净资产收益率,2020,25.05,%,annual_report,中远海控2020年报.pdf,7,,0.12 扣除非经常性损益后的基本每股 收益（元／股） 0.78 0.13 500.00 0.02 加权平均净资产收益率（%） 25.05 21.57 增加3.48个百分点 5.52 扣除非经常性损益后的加权平均 净资产收益率（%） 24.20 5.06 增加19.14个百分点 0.85 报告期末,high,candidate,
+terminal_revenue,码头业务收入,2020,70.06,亿元,annual_report,中远海控2020年报.pdf,15,,中远海运港口码头业务收入70.06 亿元，同比减少2.11 亿元，降幅2.93%。,high,reviewed,规则抽取+人工核对年报确认
+total_assets,总资产,2020,2719.26,亿元,annual_report,中远海控2020年报.pdf,7,,",928.85 35,359,676,133.83 24.19 22,886,213,478.10 总资产 271,926,073,831.72 262,224,029,547.74 3.70 228,143,804,963.20 (二) 主要财务指标 主要财务指标 2020年 2019年 本期比上年同",high,candidate,
+ccfi_average,CCFI 年均值,2021,2615.54,点,external,,,file://data/external_sources/ccfi_annual_sources.md#2021,中远海控2021年度业绩快报（官方公告）,high,reviewed,与年报原文一致，官方公告确认
+container_shipping_revenue,集装箱航运收入,2021,3279.27,亿元,annual_report,中远海控2021年报.pdf,13,,"集装箱航运业务收入3,279.27 亿元，同比增加1,619.18 亿元，增幅97.54%（其中：中远海运集运2,231.47 亿元，同比增加1,110.10 亿元，增幅98.99%）",high,reviewed,人工核对年报确认
+dividend_per_share,每股股利,2021,0.87,元/股,annual_report,中远海控2021年报.pdf,2,,akshare: 2022-06-15末期派息8.7元/10股=0.87元/股，2021年度无中期分红,high,reviewed,akshare分红数据+年报核对
+dividend_total,分红总额,2021,139.32,亿元,annual_report,中远海控2021年报.pdf,2,,"按截至2021年末公司总股本16,014,125,710股计算，合计派发现金红利139.32亿元",high,reviewed,年报原文+akshare交叉验证
+eps,基本每股收益,2021,5.59,元/股,annual_report,中远海控2021年报.pdf,6,,(二) 主要财务指标 主要财务指标 2021年 2020年 本期比上年同期增减(%) 2019年 基本每股收益（元／股） 5.59 0.62 801.61 0.43 稀释每股收益（元／股） 5.56 0.62 796.77 0.43 扣除非经常性损益后的基本每股收益（元／股） 5.58 0,high,candidate,
+equity_parent,归属于上市公司股东的净资产,2021,1330.94,亿元,annual_report,中远海控2021年报.pdf,6,,"02,371,528.39 2021年末 2020年末 本期末比上年同期末增减（%） 2019年末 归属于上市公司股东的净资产 133,094,325,586.73 43,913,865,928.85 203.08 35,359,676,133.83 总资产 413,668,080,701.40 271,926,073,8",high,candidate,
+net_profit_parent,归属于上市公司股东的净利润,2021,892.96,亿元,annual_report,中远海控2021年报.pdf,6,,"50.96 171,258,833,813.71 94.85 151,056,682,119.72 归属于上市公司股东的净利润 89,296,137,821.43 9,927,098,239.01 799.52 6,764,104,771.48 归属于上市公司股东的扣除非经常性损益的净利润 89,178,741,601.",high,candidate,
+operating_cash_flow,经营活动产生的现金流量净额,2021,1709.48,亿元,annual_report,中远海控2021年报.pdf,6,,"1,601.68 9,593,418,830.78 829.58 1,585,437,943.57 经营活动产生的现金流量净额 170,948,374,301.81 45,030,555,340.04 279.63 21,202,371,528.39 2021年末 2020年末 本期末比上年同期末增减（%） 2019年末",high,candidate,
+revenue,营业收入,2021,3336.94,亿元,annual_report,中远海控2021年报.pdf,6,,"单位：元 币种：人民币 主要会计数据 2021年 2020年 本期比上年同期增减(%) 2019年 营业收入 333,693,610,750.96 171,258,833,813.71 94.85 151,056,682,119.72 归属于上市公司股东的净利润 89,296,137,821.43 9,9",high,candidate,
+roe,加权平均净资产收益率,2021,101.11,%,annual_report,中远海控2021年报.pdf,6,,0.43 扣除非经常性损益后的基本每股收益（元／股） 5.58 0.60 830.00 0.10 加权平均净资产收益率（%） 101.11 25.05 增加76.06个百分点 21.57 扣除非经常性损益后的加权平均净资产收益率（%） 100.98 24.20 增加76.78个百分点 5.06 注,high,candidate,
+terminal_revenue,码头业务收入,2021,79.31,亿元,annual_report,中远海控2021年报.pdf,13,,中远海运港口码头业务收入79.31 亿元，同比增加9.26 亿元，增幅13.21%。,high,reviewed,规则抽取+人工核对年报确认
+total_assets,总资产,2021,4136.68,亿元,annual_report,中远海控2021年报.pdf,6,,"586.73 43,913,865,928.85 203.08 35,359,676,133.83 总资产 413,668,080,701.40 271,926,073,831.72 52.13 262,224,029,547.74 (二) 主要财务指标 主要财务指标 2021年 2020年 本期比上年",high,candidate,
+ccfi_average,CCFI 年均值,2022,2792.14,点,external,,,file://data/external_sources/ccfi_annual_sources.md#2022,上海国际海事信息与文献网（SIMIC），全年52周算术平均,high,reviewed,年报未披露CCFI年均值，外部数据补齐
+container_shipping_revenue,集装箱航运收入,2022,3840.36,亿元,annual_report,中远海控2022年报.pdf,17,,"团营业收入3,910.58 亿元，同比增加573.65 亿元，增幅17.19%。集装箱航 运业务收入3,840.36 亿元，同比增加561.08 亿元，增幅17.11%（其中：中远海运集运 2,577.51 亿元，同比增加346.04 亿元",medium,reviewed,人工核对年报确认
+dividend_per_share,每股股利,2022,3.40,元/股,annual_report,中远海控2022年报.pdf,2,,akshare: 中期2.01+末期1.39=3.40元/股（2022-12-07中期20.1元/10股，2023-06-16末期13.9元/10股）,high,reviewed,akshare分红数据+年报核对
+dividend_total,分红总额,2022,547.22,亿元,annual_report,中远海控2022年报.pdf,2,,2022年度共计派发现金红利人民币547.22亿元（中期323.50亿+末期223.72亿）,high,reviewed,年报原文+akshare交叉验证
+eps,基本每股收益,2022,6.83,元/股,annual_report,中远海控2022年报.pdf,7,,指标 2022年 2021年 本期比上年同期增减(%) 2020年 调整后 调整前 调整后 调整前 基本每股收益（元／股） 6.83 5.59 5.59 22.18 0.63 0.62 稀释每股收益（元／股） 6.77 5.56 5.56 21.76 0.62 0.62 扣除非经常性损益后的,high,candidate,
+equity_parent,归属于上市公司股东的净资产,2022,2003.83,亿元,annual_report,中远海控2022年报.pdf,7,,"2年末 2021年末 本期末比上年同 期末增减（%） 2020年末 调整后 调整前 调整后 调整前 归属于上市公司股东的净资产 200,382,772,670.87 133,693,829,778.47 133,094,325,586.73 49.88 43,963,870,585.06 43,913,865,928.85",high,candidate,
+net_profit_parent,归属于上市公司股东的净利润,2022,1095.95,亿元,annual_report,中远海控2022年报.pdf,7,,"50.96 17.19 171,259,718,324.11 171,258,833,813.71 归属于上市公司股东的净利润 109,594,742,014.79 89,348,947,262.62 89,296,137,821.43 22.66 9,979,762,206.12 9,927,098,239.01 归属于",high,candidate,
+operating_cash_flow,经营活动产生的现金流量净额,2022,1967.99,亿元,annual_report,中远海控2022年报.pdf,7,,"41,601.68 22.26 9,593,418,830.78 9,593,418,830.78 经营活动产生的现金流量净额 196,798,805,100.41 171,008,537,026.07 170,948,374,301.81 15.08 45,084,123,058.97 45,030,555,340.04",high,candidate,
+revenue,营业收入,2022,3910.58,亿元,annual_report,中远海控2022年报.pdf,7,,"据 2022年 2021年 本期比上年同期 增减(%) 2020年 调整后 调整前 调整后 调整前 营业收入 391,058,496,607.18 333,693,943,224.16 333,693,610,750.96 17.19 171,259,718,324.11 171,258,833,813.",high,candidate,
+roe,加权平均净资产收益率,2022,59.56,%,annual_report,中远海控2022年报.pdf,7,,经常性损益后的基本每股收益（元／股） 6.79 5.58 5.58 21.68 0.60 0.60 加权平均净资产收益率（%） 59.56 100.52 101.11 减少40.96个百分点 25.16 25.05 扣除非经常性损益后的加权平均净资产收益率（%） 59.43 100.98 100.,high,candidate,
+terminal_revenue,码头业务收入,2022,97.98,亿元,annual_report,中远海控2022年报.pdf,17,,中远海运港口码头业务收入97.98 亿元，同比增加18.67 亿元，增幅23.54%。,high,reviewed,规则抽取+人工核对年报确认
+total_assets,总资产,2022,5117.8,亿元,annual_report,中远海控2022年报.pdf,7,,",586.73 49.88 43,963,870,585.06 43,913,865,928.85 总资产 511,779,713,798.98 414,275,122,319.14 413,668,080,701.40 23.54 271,627,898,782.71 271,926,073,831.",high,candidate,
+ccfi_average,CCFI 年均值,2023,937.29,点,external,,,file://data/external_sources/ccfi_annual_sources.md#2023,上海国际海事信息与文献网（SIMIC）2024年1月全年回顾确认最终均值,high,reviewed,年报未披露CCFI年均值，外部数据补齐
+container_shipping_revenue,集装箱航运收入,2023,1681.26,亿元,annual_report,中远海控2023年报.pdf,16,,"集装箱航运业务收入1,681.26 亿元，同比减少2,159.10 亿元，降幅56.22%（其中：中远海运集运1,160.43 亿元，同比减少1,417.08 亿元，降幅54.98%）",high,reviewed,人工核对年报确认
+dividend_per_share,每股股利,2023,0.74,元/股,annual_report,中远海控2023年报.pdf,2,,akshare: 中期0.51+末期0.23=0.74元/股（2023-12-12中期5.1元/10股，2024-06-12末期2.3元/10股）,high,reviewed,akshare分红数据+年报核对
+dividend_total,分红总额,2023,118.66,亿元,annual_report,中远海控2023年报.pdf,2,,2023年度共计派发现金红利约人民币118.66亿元（中期81.96亿+末期36.70亿）,high,reviewed,年报原文+akshare交叉验证
+eps,基本每股收益,2023,1.48,元/股,annual_report,中远海控2023年报.pdf,7,,标 2023年 2022年 本期比上年同期增减 (%) 2021年 调整后 调整前 调整后 调整前 基本每股收益（元／股） 1.48 6.83 6.83 -78.33 5.60 5.59 稀释每股收益（元／股） 1.48 6.78 6.77 -78.17 5.56 5.56 扣除非经常性损益,high,candidate,
+equity_parent,归属于上市公司股东的净资产,2023,1961.15,亿元,annual_report,中远海控2023年报.pdf,7,,"3年末 2022年末 本期末比上年同 期末增减（%） 2021年末 调整后 调整前 调整后 调整前 归属于上市公司股东的净资产 196,115,256,820.06 200,590,667,092.44 200,382,772,670.87 -2.23 133,784,817,857.95 133,693,829,778.",high,candidate,
+net_profit_parent,归属于上市公司股东的净利润,2023,238.6,亿元,annual_report,中远海控2023年报.pdf,7,,"7.18 -55.14 333,693,943,224.16 333,693,943,224.16 归属于上市公司股东的净利润 23,860,257,490.68 109,703,028,636.31 109,594,742,014.79 -78.25 89,440,508,480.10 89,348,947,262.6",high,candidate,
+operating_cash_flow,经营活动产生的现金流量净额,2023,226.12,亿元,annual_report,中远海控2023年报.pdf,7,,"717.10 -78.24 89,270,302,819.16 89,178,741,601.68 经营活动产生的现金流量净额 22,612,054,840.80 196,798,805,100.41 196,798,805,100.41 -88.51 171,008,537,026.07 171,008,537,026",high,candidate,
+revenue,营业收入,2023,1754.48,亿元,annual_report,中远海控2023年报.pdf,7,,"据 2023年 2022年 本期比上年同期 增减(%) 2021年 调整后 调整前 调整后 调整前 营业收入 175,447,746,641.45 391,058,496,607.18 391,058,496,607.18 -55.14 333,693,943,224.16 333,693,943,224",high,candidate,
+roe,加权平均净资产收益率,2023,11.8,%,annual_report,中远海控2023年报.pdf,7,,常性损益后的基本每股收益（元／股） 1.47 6.80 6.79 -78.38 5.59 5.58 加权平均净资产收益率（%） 11.80 59.84 59.56 减少48.04个百分点 100.57 100.52 扣除非经常性损益后的加权平均净资产收益率（%） 11.74 59.44 59.43,high,candidate,
+terminal_revenue,码头业务收入,2023,103.96,亿元,annual_report,中远海控2023年报.pdf,16,,中远海运港口码头业务收入103.96 亿元，同比增加5.98 亿元，增幅6.10%。,high,reviewed,规则抽取+人工核对年报确认
+total_assets,总资产,2023,4624.29,亿元,annual_report,中远海控2023年报.pdf,7,,"70.87 -2.23 133,784,817,857.95 133,693,829,778.47 总资产 462,429,380,596.11 511,930,077,251.13 511,779,713,798.98 -9.67 414,275,122,319.14 414,275,122,319.",high,candidate,
+ccfi_average,CCFI 年均值,2024,1550.59,点,external,,,file://data/external_sources/ccfi_annual_sources.md#2024,上海国际海事信息与文献网（SIMIC）,high,reviewed,年报未披露CCFI年均值，外部数据补齐
+container_shipping_revenue,集装箱航运收入,2024,2259.71,亿元,annual_report,中远海控2024年报.pdf,16,,"集装箱航运业务收入2,259.71 亿元，同比增加578.40 亿元，增幅34.40%（其中：中远海运集运1,560.60 亿元，同比增加400.12 亿元，增幅34.48%）",high,reviewed,人工核对年报确认
+dividend_per_share,每股股利,2024,1.55,元/股,annual_report,中远海控2024年报.pdf,2,,akshare: 中期0.52+末期1.03=1.55元/股（2024-08-30中期5.2元/10股，2025-06-17末期10.3元/10股）,high,reviewed,akshare分红数据+年报核对
+dividend_total,分红总额,2024,244.31,亿元,annual_report,中远海控2024年报.pdf,2,,本年度公司现金分红(包括中期已分配的现金红利)总额约人民币244.31亿元,high,reviewed,年报原文+akshare交叉验证
+eps,基本每股收益,2024,3.08,元/股,annual_report,中远海控2024年报.pdf,7,,财务指标 2024年 2023年 本期比上年同期增减（%） 2022年 （调整后） 调整后 调整前 基本每股收益（元／股） 3.08 1.48 1.48 108.11 6.83 稀释每股收益（元／股） 3.08 1.48 1.48 108.11 6.78 扣除非经常性损益后的基本每股收益（元,high,candidate,
+equity_parent,归属于上市公司股东的净资产,2024,2346.68,亿元,annual_report,中远海控2024年报.pdf,7,,"024年末 2023年末 本期末比上年同 期末增减（%） 2022年末 （调整后） 调整后 调整前 归属于上市公司股东的净资产 234,668,062,562.89 196,115,227,226.87 196,115,256,820.06 19.66 200,590,729,463.42 总资产 497,472,213,",high,candidate,
+net_profit_parent,归属于上市公司股东的净利润,2024,491.0,亿元,annual_report,中远海控2024年报.pdf,7,,"31.13 175,447,746,641.45 33.29 391,058,496,607.18 归属于上市公司股东的净利润 49,100,495,233.55 23,860,168,952.59 23,860,257,490.68 105.78 109,703,065,983.39 归属于上市公司股东的扣除非经常性",high,candidate,
+operating_cash_flow,经营活动产生的现金流量净额,2024,693.13,亿元,annual_report,中远海控2024年报.pdf,7,,"08.28 23,752,793,941.16 106.37 109,133,011,996.68 经营活动产生的现金流量净额 69,312,919,440.49 22,583,829,373.50 22,612,054,840.80 206.91 196,814,775,064.25 主要会计数据 2024年末 202",high,candidate,
+revenue,营业收入,2024,2338.59,亿元,annual_report,中远海控2024年报.pdf,7,,"计数据 2024年 2023年 本期比上年同期 增减（%） 2022年 （调整后） 调整后 调整前 营业收入 233,859,078,966.99 175,452,975,431.13 175,447,746,641.45 33.29 391,058,496,607.18 归属于上市公司股东的净利润 49",high,candidate,
+roe,加权平均净资产收益率,2024,22.6,%,annual_report,中远海控2024年报.pdf,7,,扣除非经常性损益后的基本每股收益（元／股） 3.07 1.47 1.47 108.84 6.80 加权平均净资产收益率（%） 22.60 11.80 11.80 增加10.80个百分点 59.84 扣除非经常性损益后的加权平均净资产收益率（%） 22.56 11.74 11.74 增加10.82,high,candidate,
+terminal_revenue,码头业务收入,2024,108.10,亿元,annual_report,中远海控2024年报.pdf,16,,中远海运港口码头业务收入108.10亿元，同比增加4.14亿元，增幅3.98%。,high,reviewed,规则抽取+人工核对年报确认
+total_assets,总资产,2024,4974.72,亿元,annual_report,中远海控2024年报.pdf,7,,"26.87 196,115,256,820.06 19.66 200,590,729,463.42 总资产 497,472,213,736.26 462,570,619,365.72 462,429,380,596.11 7.55 512,070,859,509.61 （二）主要财务指标 主要财务指标",high,candidate,
+ccfi_average,CCFI 年均值,2025,1197.60,点,external,,,file://data/external_sources/ccfi_annual_sources.md#2025,上海国际海事信息与文献网（SIMIC）2026年1月全年回顾确认最终值,high,reviewed,年报未披露CCFI年均值，外部数据补齐
+container_shipping_revenue,集装箱航运收入,2025,2107.31,亿元,annual_report,中远海控2025年报.pdf,15,,"集团营业收入2,195.04 亿元，同比减少143.55 亿元，降幅6.14%。集装箱航运 业务收入2,107.31 亿元，同比减少152.40 亿元，降幅6.74%（其中：中远海运集运1,479.33 亿 元，同比减少81.27 亿元，降",medium,reviewed,人工核对年报确认
+dividend_per_share,每股股利,2025,1.00,元/股,annual_report,中远海控2025年报.pdf,2,,akshare: 中期0.56+末期0.44=1.00元/股（2025-10-16中期5.6元/10股，2026-03-20末期4.4元/10股预案）,high,reviewed,akshare分红数据+年报核对
+dividend_total,分红总额,2025,154.12,亿元,annual_report,中远海控2025年报.pdf,2,,2025年度预计共派发现金红利约人民币154.12亿元（中期86.74亿+末期67.38亿）,high,reviewed,年报原文+akshare交叉验证
+eps,基本每股收益,2025,1.99,元/股,annual_report,中远海控2025年报.pdf,7,,(二) 主要财务指标 主要财务指标 2025年 2024年 本期比上年同期增减(%) 2023年 基本每股收益（元／股） 1.99 3.08 -35.39 1.48 稀释每股收益（元／股） 1.99 3.08 -35.39 1.48 扣除非经常性损益后的基本每 股收益（元／股） 1.98,high,candidate,
+equity_parent,归属于上市公司股东的净资产,2025,2322.65,亿元,annual_report,中远海控2025年报.pdf,7,,"3.50 主要会计数据 2025年末 2024年末 本期末比上 年同期末增 减（%） 2023年末 归属于上市公司股 东的净资产 232,265,324,350.62 234,668,062,562.89 -1.02 196,115,227,226.87 总资产 483,758,023 ,838.79 497,472,213",high,candidate,
+net_profit_parent,归属于上市公司股东的净利润,2025,308.68,亿元,annual_report,中远海控2025年报.pdf,7,,"526.88 66,889,531,688.45 -37.21 33,079,791,412.51 归属于上市公司股 东的净利润 30,868,147,821.38 49,100,495,233.55 -37.13 23,860,168,952.59 归属于上市公司股 东的扣除非经常性 损益的净利润 30,727,290,",high,candidate,
+operating_cash_flow,经营活动产生的现金流量净额,2025,455.46,亿元,annual_report,中远海控2025年报.pdf,7,,"693.06 49,017,179,110.85 -37.31 23,752,171,108.28 经营活动产生的现 金流量净额 45,545,770,431.23 69,312,919,440.49 -34.29 22,583,829,373.50 主要会计数据 2025年末 2024年末 本期末比上 年同期末增 减（%",high,candidate,
+revenue,营业收入,2025,2195.04,亿元,annual_report,中远海控2025年报.pdf,7,,"位：元 币种：人民币 主要会计数据 2025年 2024年 本期比上年 同期增减(%) 2023年 营业收入 219,503,805,222.70 233,859,078,966.99 -6.14 175,452,975,431.13 利润总额 41,999,673,526.88 66,889,531,6",high,candidate,
+roe,加权平均净资产收益率,2025,13.17,%,annual_report,中远海控2025年报.pdf,7,,1.48 扣除非经常性损益后的基本每 股收益（元／股） 1.98 3.07 -35.50 1.47 加权平均净资产收益率（%） 13.17 22.60 减少9.43个百分点 11.80 扣除非经常性损益后的加权平 均净资产收益率（%） 13.11 22.56 减少9.45个百分点 11.74 报告,high,candidate,
+terminal_revenue,码头业务收入,2025,120.41,亿元,annual_report,中远海控2025年报.pdf,15,,中远海运港口码头业务收入120.41 亿元，同比增加12.31 亿元，增幅11.39%。,high,reviewed,规则抽取+人工核对年报确认
+total_assets,总资产,2025,4837.58,亿元,annual_report,中远海控2025年报.pdf,7,,"50.62 234,668,062,562.89 -1.02 196,115,227,226.87 总资产 483,758,023 ,838.79 497,472,213,736.26 -2.76 462,570,619,365.72 (二) 主要财务指标 主要财务指标 2025年 2024年 本期比上年",high,candidate,
+year_end_close,年末收盘价,2017,6.77,元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare stock_zh_a_daily 不复权年末收盘价,high,reviewed,自动获取
+year_high,年度最高价,2017,8.52,元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare stock_zh_a_daily 不复权年度最高价,high,reviewed,自动获取
+year_low,年度最低价,2017,5.01,元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare stock_zh_a_daily 不复权年度最低价,high,reviewed,自动获取
+market_cap,年末总市值,2017,517,亿元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare: 年末收盘价×流通股本,high,reviewed,自动获取
+pe_year_end,年末市盈率PE,2017,26.0,倍,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare: 年末收盘价÷EPS,high,reviewed,
+pb_year_end,年末市净率PB,2017,2.50,倍,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare: 年末收盘价÷每股净资产,high,reviewed,
+year_end_close,年末收盘价,2018,4.04,元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare stock_zh_a_daily 不复权年末收盘价,high,reviewed,自动获取
+year_high,年度最高价,2018,7.48,元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare stock_zh_a_daily 不复权年度最高价,high,reviewed,自动获取
+year_low,年度最低价,2018,3.33,元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare stock_zh_a_daily 不复权年度最低价,high,reviewed,自动获取
+market_cap,年末总市值,2018,308,亿元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare: 年末收盘价×流通股本,high,reviewed,自动获取
+pe_year_end,年末市盈率PE,2018,33.7,倍,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare: 年末收盘价÷EPS,high,reviewed,
+pb_year_end,年末市净率PB,2018,1.35,倍,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare: 年末收盘价÷每股净资产,high,reviewed,
+year_end_close,年末收盘价,2019,5.27,元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare stock_zh_a_daily 不复权年末收盘价,high,reviewed,自动获取
+year_high,年度最高价,2019,6.58,元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare stock_zh_a_daily 不复权年度最高价,high,reviewed,自动获取
+year_low,年度最低价,2019,4.02,元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare stock_zh_a_daily 不复权年度最低价,high,reviewed,自动获取
+market_cap,年末总市值,2019,402,亿元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare: 年末收盘价×流通股本,high,reviewed,自动获取
+pe_year_end,年末市盈率PE,2019,9.4,倍,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare: 年末收盘价÷EPS,high,reviewed,
+pb_year_end,年末市净率PB,2019,1.14,倍,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare: 年末收盘价÷每股净资产,high,reviewed,
+year_end_close,年末收盘价,2020,12.21,元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare stock_zh_a_daily 不复权年末收盘价,high,reviewed,自动获取
+year_high,年度最高价,2020,12.65,元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare stock_zh_a_daily 不复权年度最高价,high,reviewed,自动获取
+year_low,年度最低价,2020,3.14,元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare stock_zh_a_daily 不复权年度最低价,high,reviewed,自动获取
+market_cap,年末总市值,2020,1057,亿元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare: 年末收盘价×流通股本,high,reviewed,自动获取
+pe_year_end,年末市盈率PE,2020,15.1,倍,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare: 年末收盘价÷EPS,high,reviewed,
+pb_year_end,年末市净率PB,2020,2.41,倍,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare: 年末收盘价÷每股净资产,high,reviewed,
+year_end_close,年末收盘价,2021,18.69,元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare stock_zh_a_daily 不复权年末收盘价,high,reviewed,自动获取
+year_high,年度最高价,2021,33.4,元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare stock_zh_a_daily 不复权年度最高价,high,reviewed,自动获取
+year_low,年度最低价,2021,9.59,元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare stock_zh_a_daily 不复权年度最低价,high,reviewed,自动获取
+market_cap,年末总市值,2021,2118,亿元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare: 年末收盘价×流通股本,high,reviewed,自动获取
+pe_year_end,年末市盈率PE,2021,3.3,倍,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare: 年末收盘价÷EPS,high,reviewed,
+pb_year_end,年末市净率PB,2021,1.59,倍,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare: 年末收盘价÷每股净资产,high,reviewed,
+year_end_close,年末收盘价,2022,10.29,元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare stock_zh_a_daily 不复权年末收盘价,high,reviewed,自动获取
+year_high,年度最高价,2022,19.93,元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare stock_zh_a_daily 不复权年度最高价,high,reviewed,自动获取
+year_low,年度最低价,2022,10.13,元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare stock_zh_a_daily 不复权年度最低价,high,reviewed,自动获取
+market_cap,年末总市值,2022,1311,亿元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare: 年末收盘价×流通股本,high,reviewed,自动获取
+pe_year_end,年末市盈率PE,2022,1.5,倍,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare: 年末收盘价÷EPS,high,reviewed,
+pb_year_end,年末市净率PB,2022,0.65,倍,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare: 年末收盘价÷每股净资产,high,reviewed,
+year_end_close,年末收盘价,2023,9.58,元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare stock_zh_a_daily 不复权年末收盘价,high,reviewed,自动获取
+year_high,年度最高价,2023,11.73,元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare stock_zh_a_daily 不复权年度最高价,high,reviewed,自动获取
+year_low,年度最低价,2023,9.3,元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare stock_zh_a_daily 不复权年度最低价,high,reviewed,自动获取
+market_cap,年末总市值,2023,1222,亿元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare: 年末收盘价×流通股本,high,reviewed,自动获取
+pe_year_end,年末市盈率PE,2023,6.5,倍,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare: 年末收盘价÷EPS,high,reviewed,
+pb_year_end,年末市净率PB,2023,0.62,倍,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare: 年末收盘价÷每股净资产,high,reviewed,
+year_end_close,年末收盘价,2024,15.5,元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare stock_zh_a_daily 不复权年末收盘价,high,reviewed,自动获取
+year_high,年度最高价,2024,17.58,元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare stock_zh_a_daily 不复权年度最高价,high,reviewed,自动获取
+year_low,年度最低价,2024,9.21,元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare stock_zh_a_daily 不复权年度最低价,high,reviewed,自动获取
+market_cap,年末总市值,2024,1978,亿元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare: 年末收盘价×流通股本,high,reviewed,自动获取
+pe_year_end,年末市盈率PE,2024,5.0,倍,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare: 年末收盘价÷EPS,high,reviewed,
+pb_year_end,年末市净率PB,2024,0.84,倍,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare: 年末收盘价÷每股净资产,high,reviewed,
+year_end_close,年末收盘价,2025,15.18,元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare stock_zh_a_daily 不复权年末收盘价,high,reviewed,自动获取
+year_high,年度最高价,2025,16.89,元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare stock_zh_a_daily 不复权年度最高价,high,reviewed,自动获取
+year_low,年度最低价,2025,12.74,元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare stock_zh_a_daily 不复权年度最低价,high,reviewed,自动获取
+market_cap,年末总市值,2025,1914,亿元,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare: 年末收盘价×流通股本,high,reviewed,自动获取
+pe_year_end,年末市盈率PE,2025,7.6,倍,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare: 年末收盘价÷EPS,high,reviewed,
+pb_year_end,年末市净率PB,2025,0.82,倍,external,,,"akshare.stock_zh_a_daily(symbol='sh601919', adjust='') 不复权日线",akshare: 年末收盘价÷每股净资产,high,reviewed,
+container_shipping_cost,集装箱航运成本,2017,803.60,亿元,annual_report,中远海控2017年报.pdf,13,,集装箱航运业务成本803.60亿元,high,reviewed,规则抽取，与收入口径一致
+container_shipping_cost,集装箱航运成本,2018,1069.90,亿元,annual_report,中远海控2018年报.pdf,15,,集装箱航运业务成本1069.90亿元,high,reviewed,规则抽取，与收入口径一致
+container_shipping_cost,集装箱航运成本,2019,1313.20,亿元,annual_report,中远海控2019年报.pdf,16,,集装箱航运业务成本1313.20亿元,high,reviewed,规则抽取，与收入口径一致
+container_shipping_cost,集装箱航运成本,2020,1433.78,亿元,annual_report,中远海控2020年报.pdf,15,,集装箱航运业务成本1433.78亿元,high,reviewed,规则抽取，与收入口径一致
+container_shipping_cost,集装箱航运成本,2021,1890.70,亿元,annual_report,中远海控2021年报.pdf,13,,集装箱航运业务成本1890.70亿元,high,reviewed,规则抽取，与收入口径一致
+container_shipping_cost,集装箱航运成本,2022,2140.64,亿元,annual_report,中远海控2022年报.pdf,17,,集装箱航运业务成本2140.64亿元,high,reviewed,规则抽取，与收入口径一致
+container_shipping_cost,集装箱航运成本,2023,1425.71,亿元,annual_report,中远海控2023年报.pdf,16,,集装箱航运业务成本1425.71亿元,high,reviewed,规则抽取，与收入口径一致
+container_shipping_cost,集装箱航运成本,2024,1599.15,亿元,annual_report,中远海控2024年报.pdf,17,,集装箱航运业务成本1599.15亿元,high,reviewed,规则抽取，与收入口径一致
+container_shipping_cost,集装箱航运成本,2025,1697.68,亿元,annual_report,中远海控2025年报.pdf,15,,集装箱航运业务成本1697.68亿元,high,reviewed,规则抽取，与收入口径一致
+interest_bearing_debt,有息负债,2017,629.89,亿元,annual_report,中远海控2017年报.pdf,74,,短期借款109.40亿；长期借款300.38亿；应付债券133.85亿；一年内到期非流动负债86.27亿；合计629.89亿,high,reviewed,短期借款+长期借款+应付债券+一年内到期的非流动负债
+interest_bearing_debt,有息负债,2018,1222.08,亿元,annual_report,中远海控2018年报.pdf,96,,短期借款482.21亿；长期借款470.52亿；应付债券178.29亿；一年内到期非流动负债91.07亿；合计1222.08亿,high,reviewed,短期借款+长期借款+应付债券+一年内到期的非流动负债
+interest_bearing_debt,有息负债,2019,1258.08,亿元,annual_report,中远海控2019年报.pdf,91,,短期借款147.52亿；长期借款795.03亿；应付债券130.18亿；一年内到期非流动负债185.35亿；合计1258.08亿,high,reviewed,短期借款+长期借款+应付债券+一年内到期的非流动负债
+interest_bearing_debt,有息负债,2020,987.82,亿元,annual_report,中远海控2020年报.pdf,79,,短期借款41.30亿；长期借款634.99亿；应付债券94.53亿；一年内到期非流动负债217.00亿；合计987.82亿,high,reviewed,短期借款+长期借款+应付债券+一年内到期的非流动负债
+interest_bearing_debt,有息负债,2021,838.69,亿元,annual_report,中远海控2021年报.pdf,83,,短期借款16.56亿；长期借款558.97亿；应付债券29.10亿；一年内到期非流动负债234.07亿；合计838.69亿,high,reviewed,短期借款+长期借款+应付债券+一年内到期的非流动负债
+interest_bearing_debt,有息负债,2022,583.77,亿元,annual_report,中远海控2022年报.pdf,99,,短期借款22.42亿；长期借款342.98亿；应付债券31.43亿；一年内到期非流动负债186.95亿；合计583.77亿,high,reviewed,短期借款+长期借款+应付债券+一年内到期的非流动负债
+interest_bearing_debt,有息负债,2023,525.40,亿元,annual_report,中远海控2023年报.pdf,91,,短期借款24.18亿；长期借款327.37亿；应付债券0.00亿(附注)；一年内到期非流动负债173.85亿；合计525.40亿,high,reviewed,短期借款+长期借款+应付债券+一年内到期的非流动负债
+interest_bearing_debt,有息负债,2024,441.96,亿元,annual_report,中远海控2024年报.pdf,101,,短期借款17.04亿；长期借款305.27亿；应付债券0.00亿(附注)；一年内到期非流动负债119.65亿；合计441.96亿,high,reviewed,短期借款+长期借款+应付债券+一年内到期的非流动负债
+interest_bearing_debt,有息负债,2025,440.77,亿元,annual_report,中远海控2025年报.pdf,97,,短期借款20.69亿；长期借款252.73亿；应付债券0(资产负债表显示为-)；一年内到期非流动负债167.36亿；合计440.77亿,high,reviewed,短期借款+长期借款+应付债券+一年内到期的非流动负债
+buyback_amount,回购金额,2017,0.00,亿元,annual_report,中远海控2017年报.pdf,51,,年报A+H回购总额0.00亿元（A股部分akshare交叉验证一致）,high,reviewed,A+H合计，A股部分akshare交叉验证一致
+buyback_amount,回购金额,2018,0.00,亿元,annual_report,中远海控2018年报.pdf,51,,年报A+H回购总额0.00亿元（A股部分akshare交叉验证一致）,high,reviewed,A+H合计，A股部分akshare交叉验证一致
+buyback_amount,回购金额,2019,0.00,亿元,annual_report,中远海控2019年报.pdf,51,,年报A+H回购总额0.00亿元（A股部分akshare交叉验证一致）,high,reviewed,A+H合计，A股部分akshare交叉验证一致
+buyback_amount,回购金额,2020,0.00,亿元,annual_report,中远海控2020年报.pdf,51,,年报A+H回购总额0.00亿元（A股部分akshare交叉验证一致）,high,reviewed,A+H合计，A股部分akshare交叉验证一致
+buyback_amount,回购金额,2021,0.00,亿元,annual_report,中远海控2021年报.pdf,51,,年报A+H回购总额0.00亿元（A股部分akshare交叉验证一致）,high,reviewed,A+H合计，A股部分akshare交叉验证一致
+buyback_amount,回购金额,2022,0.00,亿元,annual_report,中远海控2022年报.pdf,56,,年报A+H回购总额0.00亿元（A股部分akshare交叉验证一致）,high,reviewed,A+H合计，A股部分akshare交叉验证一致
+buyback_amount,回购金额,2023,12.61,亿元,annual_report,中远海控2023年报.pdf,54,,年报A+H回购总额12.61亿元（A股部分akshare交叉验证一致）,high,reviewed,A+H合计，A股部分akshare交叉验证一致
+buyback_amount,回购金额,2024,20.18,亿元,annual_report,中远海控2024年报.pdf,54,,年报A+H回购总额20.18亿元（A股部分akshare交叉验证一致）,high,reviewed,A+H合计，A股部分akshare交叉验证一致
+buyback_amount,回购金额,2025,65.61,亿元,annual_report,中远海控2025年报.pdf,51,,年报A+H回购总额65.61亿元（A股部分akshare交叉验证一致）,high,reviewed,A+H合计，A股部分akshare交叉验证一致
+revenue,营业收入,2026,517.97,亿元,annual_report,中远海控2026年一季度报.pdf,2,,"Q1营收51,796,875,575.87元",high,reviewed,2026年一季报，单季度数据
+net_profit_parent,归母净利润,2026,58.77,亿元,annual_report,中远海控2026年一季度报.pdf,2,,"Q1归母净利5,876,939,302.39元",high,reviewed,2026年一季报，单季度数据
+operating_cash_flow,经营现金流,2026,111.25,亿元,annual_report,中远海控2026年一季度报.pdf,2,,"Q1经营现金流11,124,842,134.58元",high,reviewed,2026年一季报，单季度数据
+eps,基本每股收益,2026,0.38,元/股,annual_report,中远海控2026年一季度报.pdf,2,,Q1基本每股收益0.38元,high,reviewed,2026年一季报，单季度数据
+roe,加权平均净资产收益率,2026,2.51,%,annual_report,中远海控2026年一季度报.pdf,2,,Q1加权平均ROE 2.51%,high,reviewed,2026年一季报，单季度数据
+total_assets,总资产,2026,4860.23,亿元,annual_report,中远海控2026年一季度报.pdf,10,,"Q1末总资产486,023,005,312.41元",high,reviewed,2026年一季报，单季度数据
+equity_parent,归母权益,2026,2356.90,亿元,annual_report,中远海控2026年一季度报.pdf,11,,"Q1末归母权益235,689,581,989.21元",high,reviewed,2026年一季报，单季度数据
+container_shipping_revenue,集装箱航运收入,2026,496.38,亿元,annual_report,中远海控2026年一季度报.pdf,7,,"Q1集装箱航运业务收入49,638,082千元",high,reviewed,2026年一季报，单季度数据
+interest_bearing_debt,有息负债,2026,422.51,亿元,annual_report,中远海控2026年一季度报.pdf,10,,Q1末:短期借款13.23+长期借款241.60+一年内到期167.68=422.51亿(应付债券为0),high,reviewed,2026年一季报，单季度数据
+ccfi_average,CCFI 年均值,2026,1130.00,点,external,,,file:data/external_sources/ccfi_weekly.csv Q1周度算术平均,2026年Q1(1-3月)共11周CCFI周度数据算术平均=1130.00点,high,reviewed,周度数据算术平均，口径与年度CCFI一致
+freight_volume,航运运量,2017,2091.4,万TEU,annual_report,中远海控2017年报.pdf,10,,本集团集装箱航运货运量合计2091.4万TEU,high,reviewed,年报行业经营性信息分析-集装箱航运业务-货运量表格合计行
+freight_volume,航运运量,2018,1836.6,万TEU,annual_report,中远海控2018年报.pdf,24,,本集团集装箱航运货运量合计1836.6万TEU,high,reviewed,年报行业经营性信息分析-集装箱航运业务-货运量表格合计行
+freight_volume,航运运量,2019,2573.9,万TEU,annual_report,中远海控2019年报.pdf,22,,本集团集装箱航运货运量合计2573.9万TEU,high,reviewed,年报行业经营性信息分析-集装箱航运业务-货运量表格合计行
+freight_volume,航运运量,2020,2634.4,万TEU,annual_report,中远海控2020年报.pdf,20,,本集团集装箱航运货运量合计2634.4万TEU,high,reviewed,年报行业经营性信息分析-集装箱航运业务-货运量表格合计行
+freight_volume,航运运量,2021,1932.5,万TEU,annual_report,中远海控2021年报.pdf,20,,本集团集装箱航运货运量合计1932.5万TEU,high,reviewed,年报行业经营性信息分析-集装箱航运业务-货运量表格合计行
+freight_volume,航运运量,2022,2441.2,万TEU,annual_report,中远海控2022年报.pdf,24,,本集团集装箱航运货运量合计2441.2万TEU,high,reviewed,年报行业经营性信息分析-集装箱航运业务-货运量表格合计行
+freight_volume,航运运量,2023,2355.5,万TEU,annual_report,中远海控2023年报.pdf,22,,本集团集装箱航运货运量合计2355.5万TEU,high,reviewed,年报行业经营性信息分析-集装箱航运业务-货运量表格合计行
+freight_volume,航运运量,2024,2593.9,万TEU,annual_report,中远海控2024年报.pdf,23,,本集团集装箱航运货运量合计2593.9万TEU,high,reviewed,年报行业经营性信息分析-集装箱航运业务-货运量表格合计行
+freight_volume,航运运量,2025,2743.5,万TEU,annual_report,中远海控2025年报.pdf,21,,本集团集装箱航运货运量合计2743.5万TEU,high,reviewed,年报行业经营性信息分析-集装箱航运业务-货运量表格合计行
+freight_volume,航运运量,2026,691.6,万TEU,annual_report,中远海控2026年一季报.pdf,6,,本集团集装箱航运货运量691.6万TEU(Q1单季度),high,reviewed,年报行业经营性信息分析-集装箱航运业务-货运量表格合计行; Q1单季度
